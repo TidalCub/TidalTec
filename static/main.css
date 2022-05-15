@@ -1,0 +1,188 @@
+HTML{
+  overflow: visible;
+}
+body {
+    /*background-image: url(/static/MTP.avif);*/
+    background-color: #ccc;
+    padding: 0;
+    margin: 0;
+    width:100%;
+    font-family: sans-serif;
+}
+#Header {
+    position:inherit;
+    display:inline-flex;
+    float: left;
+    height: 100PX;
+    width: 100%;
+    background-color: #121212;
+    
+}
+#Logo {
+    float: left;
+    padding-left: 10px;
+    height: 80%;
+    margin: auto 5px;
+    width:20%;
+    
+    
+}
+
+#Heading{
+        
+    display: initial;
+    width:60%;
+    margin: auto 5px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    
+}
+#HeadRight {
+    float: left;
+    padding-left: 10px;
+    height: 80%;
+    margin: auto 5px;
+    width:20%;
+    
+}
+#Nav {
+    position:relative;
+    display:inline-flex;
+    height: 50px;
+    width: 100%;
+    background-color: #0b0b0b;  
+    
+}
+#NavWrapper{
+    display: none;
+}
+#NavWrapperMobile{
+    display: initial;
+}
+.dropbtn {
+    background-color: #0b0b0b;
+    color: white;
+    height: 100%;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #121212;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width:100%;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+#Bod {
+    position: relative;
+    
+    width:100%;
+    
+    
+}
+
+#Banner{
+  position: relative;
+  width:100%;
+  height:15vh;
+  background-color:brown;
+}
+.ProductsShowcase{
+  position: relative;
+  width:100%;
+  height:60vh; 
+  margin-top: 10px;
+  background-color:green;
+}
+
+.modal-backdrop {
+  display: none;
+  z-index: 1040 !important;
+}
+
+.modal-content {
+  margin: 2px auto;
+  z-index: 1100 !important;
+}
+@media only screen and (min-width: 800px) {
+    #Heading{
+        font-size: 40px;
+    }
+    .dropdown{
+        display: none;
+    }
+    #NavWrapper{
+        display: initial;
+        position: relative;
+        
+        margin-left:auto;
+        margin-right:auto;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 13px;
+        text-decoration: none;
+      }
+      
+      li a:hover {
+        background-color: #111111;
+      }
+    
+    #Bod{
+      position: relative;
+      width:90%;
+      left:5%
+        
+    }
+    
+}
+@media only screen and (min-width: 900px) {
+    #Heading{
+        font-size: 60px;
+        
+    }
+}

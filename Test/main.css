@@ -1,0 +1,12 @@
+#Div1 {
+    position: absolute;
+    
+    background-color: aqua;
+    height:50%;
+}
+#Div2 {
+    top:50%;
+    position: absolute;
+    background-color: blueviolet;
+    height:20%;
+}
