@@ -5,9 +5,10 @@ HTML{
   font-family: Schmalfette;
   src: url(/static/SchmalfetteCP.ttf);
 }
+
 body {
     /*background-image: url(/static/MTP.avif);*/
-    background-color: #ccc;
+    background-color: #fff;
     padding: 0;
     margin: 0;
     width:100%;
@@ -195,6 +196,11 @@ body {
   text-align: center;
   font-weight: bold;
   font-size: larger;
+  color:black;
+}
+a{
+  
+  text-decoration: none;
 }
 .proimg{
   width:100%;
