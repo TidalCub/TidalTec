@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %} 
+
+{% block body %}
+<body>
+     
+    <div class="Bod">
+    <div class="PageHeader">Accessories</div>
+    <div class="pagesub"></div>
+    <div class="productwrapper">
+    {% for ser in data %}
+    <div class="product">
+        <div class="proimg">
+            <img src="/static/{{ser[3]}}.png" width="100%" height="100%">
+        </div>
+        <div class="ProTitle">
+            {{ser[1]}}
+        </div>
+
+    </div>
+    
+    {%endfor%}
+    </div>
+</div>
+</body>
+
+{% endblock %}

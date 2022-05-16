@@ -12,6 +12,12 @@ def home():
 def wholesale():
     data = session.query(Wholesale).all()
     return render_template('wholesale.html',data = data)
+
+@app.route("/accessories")
+def accessories():
+    data = session.query(Wholesale).all()
+    return render_template('accessories.html',data = data)
+
 if __name__ == "__main__":
     app.run(debug=True)
 

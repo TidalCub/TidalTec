@@ -36,11 +36,12 @@
      
     <div class="Bod">
     <div class="PageHeader">Wholesale</div>
+    <div class="pagesub">Wholesale is for business customers <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#myModal">Learn More</button> </div>
     <div class="productwrapper">
     {% for ser in data %}
     <div class="product">
         <div class="proimg">
-            <img src="{{ser[2]}}" width="100%" height="100%">
+            <img src="/static/{{ser[3]}}.png" width="100%" height="100%">
         </div>
         <div class="ProTitle">
             {{ser[1]}}
