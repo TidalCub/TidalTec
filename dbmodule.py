@@ -16,6 +16,7 @@ Wholesale = Table(
         Column('Title', String),
         Column('Price',Integer),
         Column('Img',String),
+        Column('Cat', String),
 )
 meta.create_all(engine)
 print(session.query(Wholesale).all())

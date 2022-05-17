@@ -38,21 +38,22 @@
     <div class="PageHeader">Wholesale</div>
     <div class="pagesub">Wholesale is for business customers <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#myModal">Learn More</button> </div>
     <div class="productwrapper">
-    {% for ser in data %}
-    <a href="/wholesale/{{ser[0]}}">
-    <div class="product">
-        <div class="proimg">
-            <img src="/static/{{ser[3]}}.png" width="100%" height="100%">
+        
+        <div class="cathalf">
+            <div class="catback"></div><a href="/wholesale/bbfunnel">
+            <img src="/static/BBfunnelCatThumb.png" width="70%" height="100%">
+        </a></div>
+        
+        <div class="cathalf">
+            <div class="catback"></div><a href="/wholesale/keychain">
+            <img src="/static/keychainsCatThumb.png" width="70%" height="100%"></a>
         </div>
-        <div class="ProTitle">
-            {{ser[1]}}
+        <div class="cathalf">
+            <div class="catback"></div>
+            <img src="/static/MoreThumb.png" width="70%" height="100%">
         </div>
-
+        
     </div>
-    </a>
-    {%endfor%}
-    </div>
-</div>
 </body>
 
 
