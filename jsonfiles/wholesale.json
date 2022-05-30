@@ -8,5 +8,42 @@
             "cat":"keychain",
             "title":"keychains"
         }
+    ],
+    "Products":[
+        {
+            "Title":"M4 BB Funnel",
+            "Desc":"A Funnel for Hi-Cap m4 Mags to easily and quickly fill up your magazines and get you back into the game quicker. Great for large-capacity magazines, like drums mags, or even standard 300rnd Mags.",
+            "Img1":"001nobackpreview",
+            "colour":"black,grey,red,white,yellow,green",
+            "Price":"2.50"
+        },
+        {
+            "Title":"AUG BB Funnel",
+            "Desc":"",
+            "Img1":"003nobackpreview",
+            "colour":"black,grey,red,white,yellow,green",
+            "Price":"2.50"
+        },
+        {
+            "Title":"MOSCART BB Funnel",
+            "Desc":"",
+            "Img1":"004nobackpreview",
+            "colour":"black,grey,red,white,yellow,green",
+            "Price":"2.50"
+        },
+        {
+            "Title":"MP5 BB Funnel",
+            "Desc":"",
+            "Img1":"",
+            "colour":"black,grey,red,white,yellow,green",
+            "Price":"2.50"
+        },
+        {
+            "Title":"M4 KeyChain",
+            "Desc":"",
+            "Img1":"",
+            "colour":"black",
+            "Price":"2.50"
+        }
     ]
 }

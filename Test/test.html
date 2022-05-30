@@ -4,29 +4,16 @@
 <meta charset="utf-8">
 <title>Bootstrap modal popup example on page load</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $("#subscribe").modal('show');
-    });
-</script>
+
 </head>
 <body>
-    <div id="subscribe" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Wholesale is for Business Customers only!</h3>
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                </div>
-                <div class="modal-body">
-                    <p>Wholesale is Business to Business. Here you are able to buy Tidal Tech's products in bulk</p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>   
+    <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+      </form> 
 </body>
 </body>
 </html>

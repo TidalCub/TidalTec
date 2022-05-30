@@ -13,6 +13,7 @@ body {
     padding: 0;
     margin: 0;
     width:100%;
+    min-height:100vh;
     font-family: sans-serif;
 }
 #Header {
@@ -117,6 +118,7 @@ body {
     position: relative;
     margin-top:5px;
     width:100%;
+    height:100%;
     
     
 }
@@ -143,15 +145,43 @@ body {
 }
 #mobilebanner{
   display: initial;
-      margin-left:auto;
-        margin-right:auto;
+  margin-left:auto;
+  margin-right:auto;
 }
 .ProductsShowcase{
   position: relative;
   width:100%;
-  height:60vh; 
+  height:auto;
   margin-top: 10px;
-  /*background-color:green;*/
+  overflow-x: hidden;
+	overflow-y: hidden;
+  background-color: #D3D3D3;
+  
+  
+}
+.Wrapper{
+  display: flex;
+  overflow-x:auto;
+  
+}
+
+#InfoWidgit{
+  margin-top:10px;
+
+  height: auto;
+  padding: 10px;
+}
+.Left, .Right{
+  height:100px;
+  width: 45%;
+  position: relative;
+ 
+  
+}
+#Aboutus{
+  text-align: center;
+  font-size: large;
+  padding: 10px;
 }
 
 .modal-backdrop {
@@ -183,29 +213,103 @@ body {
   height: auto;
   text-align: center;
 }
+.Subheadding1{
+  position: relative;
+  width:100%;
+  height:60px;
+  font-size: 40px;
+  
+  text-align: center;
+ 
+  margin: auto 0;
+  font-family: Schmalfette;
+  margin-bottom: 10px;
+}
 /*Product preview div*/
 .productwrapper{ /*This is a wrapper that sits inside the bod element and contains the .product*/
   position: relative;
-  display:inline-flex;
+  
   width:100%;
   height:auto;
+  display:flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
-.product{ /*The element the image and titel sits in*/
+.product{ /*The element the image and titel sits in on the catagory screen*/
   margin:5px;
   position: relative;
   width:180px;
+  min-width: 180px;
   height: 280px;
   text-align: center;
   font-weight: bold;
   font-size: larger;
   color:black;
+  
 }
 .product a{
   text-decoration: none;
   color:black;
 }
+.productimgwrap{
+  display: inline-flex;
+  width:50%;
+  min-width: 400px;
+  max-width: 600px;
+  height: 50vh;
+  margin: 5px;
+    
+}
+
+.productimgwrap img{
+  
+  display: initial;
+  margin-left:auto;
+  margin-right:auto;
+  
+}
+
+.productleft{
+  display: flex;
+  flex-flow: column wrap;
+  
+  width: 50%;
+  min-width: 400px;
+  max-width: 800px;
+
+  margin: 5px;
+}
+/*Elements found inside prductleft element*/
+.productleftsub {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left ;
+  margin: 5px;
+  height: auto;
+  width: 100%;
+ 
+  padding-left: 10px;
+  
+  
+}
+.colourop {
+  margin:3px;
+  height:40px;
+  width:40px;
+  border: #0b0b0b;
+  clip-path: circle(50% at 50% 50%);
+  
+}
+#Price{
+  font-size: xx-large;
+  font-weight: bold;
+}
+.producttitle{
+  font-size: 60px;
+  font-family: Schmalfette;
+}
+/*Catogory page elements*/
 .cathalf a{
   position: relative;
   display: inline-flex;
@@ -252,7 +356,13 @@ body {
       margin-left:auto;
         margin-right:auto;
 }
-
+footer {
+  
+  width:100%;
+  height:100px;
+  background-color: #0b0b0b;
+  
+}
 
 /*CSS for tablet and bigger viewing*/
 @media only screen and (min-width: 800px) {
@@ -305,6 +415,10 @@ body {
       height:15vh;
       
     }
+    .Wrapper{
+      
+      justify-content: center;
+    }
     .PageHeader{
       width:60%;
       left:20%;
@@ -328,6 +442,7 @@ body {
       clip-path: polygon(10% 0%, 100% 0, 90% 100%, 0% 100%); 
       
     }
+    
     
     
 
@@ -375,7 +490,7 @@ body {
   }
 
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
   #Logo{
     display: none;
   }
@@ -391,4 +506,18 @@ body {
     min-height: 100px;
     
   }
+  .productimgwrap{
+    display: inline-flex;
+    width:90%;
+    min-width: 300px;
+    
+    height: 90vw;
+  }
+
+  
+  .productleft{
+    width: 90%;
+    min-width: 300px;
+    
+  }  
 }

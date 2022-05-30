@@ -6,26 +6,30 @@
 
 {% block body %}
 <body>
-     
     <div class="Bod">
-    <div class="PageHeader">{{Cat}}</div>
-    <div class="pagesub"></div>
-    <div class="productwrapper">
-    {% for ser in data %}
-    <div class="product">
-        <a href="/wholesale/{{ser[4]}}/{{ser[1]}}">
-        <div class="proimg">
-            <img src="/static/{{ser[3]}}.png" width="100%" height="100%">
+                        <div class="PageHeader" style="text-align: ;";></div>
+
+        <div class="productwrapper" style="background-color: ;">
+            <div class="productimgwrap">
+                <img src="/static/{{img1}}.png" width="80%" height="auto">
+            </div>
+            <div class="productleft">
+                <div class="productleftsub"><span class="producttitle">{{title}}</span></div>
+                <div class="productleftsub"><span id="Price">£--</span></div>
+                <div class="productleftsub">
+                    <span style="width:100%"><h4>Colours Avaliable:</h4></span>
+                    
+                    {% for ser in colour %}
+                        <span style="margin:5px;background-color: black;clip-path: circle(50% at 50% 50%);"><a href="#"><div class="colourop" style="background-color:{{ser}}"></div></a></span>
+                    {%endfor%}
+                </div>
+                
+                <div class="productleftsub"><h5>{{desc}}</h5></div>
+            </div>
+        
+        
         </div>
-        <div class="ProTitle">
-            {{ser[1]}}
-        </div>
-        </a>
     </div>
-    
-    {%endfor%}
-    </div>
-</div>
 </body>
 
 {% endblock %}

@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, redirect
+from sqlalchemy import false
 from dbmodule import Wholesale, session 
 import jsonhandelermodule as js
 app = Flask(__name__)
@@ -16,13 +17,17 @@ def wholesale():
 @app.route("/wholesale/<catagory>")
 def catagory(catagory):
     data = session.query(Wholesale).filter_by(Cat = catagory).all()
-    catinfo = js.wholesale(catagory)
+    catinfo = js.wholesale(catagory,False)
     print(catinfo)
-    return render_template('productpage.html',data = data, Cat=catinfo["title"])
+    return render_template('catogorypage.html',data = data, Cat=catinfo["title"],)
 
 @app.route("/wholesale/<catagory>/<product>")
 def wholeproduct(catagory,product):
-    return render_template('index.html')
+    print(product)
+    info = js.wholesale(product,True)
+    
+    colours = info["colour"].split(",")
+    return render_template('productpage.html', title=product,img1 = info["Img1"],desc=info["Desc"],colour = colours, price=info["Price"])
 
 @app.route("/accessories")
 def accessories():
