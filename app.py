@@ -34,6 +34,30 @@ def accessories():
    
    return render_template('accessories.html')
 
+@app.route("/accessories/M4BBFunnel")
+def M4BBfunnel():
+    colours = ["black","grey","red","white","yellow","green"]
+    return render_template('/producttemp/m4Funnel.html', colour = colours)
+
+@app.route("/accessories/mp5Funnel")
+def Mp5funnel():
+    colours = ["black","grey","red","white","yellow","green"]
+    return render_template('/producttemp/mp5Funnel.html', colour = colours)
+
+@app.route("/accessories/AUGFunnel")
+def AUGfunnel():
+    colours = ["black","grey","red","white","yellow","green"]
+    return render_template('/producttemp/AUGFunnel.html', colour = colours)
+
+@app.route("/accessories/AKFunnel")
+def AKfunnel():
+    colours = ["black","grey","red","white","yellow","green"]
+    return render_template('/producttemp/AKFunnel.html', colour = colours)
+
+@app.route("/accessories/MOSFunnel")
+def MOSfunnel():
+    colours = ["black","grey","red","white","yellow","green"]
+    return render_template('/producttemp/MOSFunnel.html', colour = colours)
 
 if __name__ == "__main__":
     app.run(debug=True)

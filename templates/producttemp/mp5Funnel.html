@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %} 
+
+{% block body %}
+<body>
+    <div class="Bod">
+
+        <div class="productwrapper">
+            <div class="productimgwrap">
+                <img src="/static/NoImage.png" width="80%" height="auto">
+            </div>
+            <div class="productleft">
+                <div class="productleftsub"><span class="producttitle">BB Funnel for MP5 High-Cap Magazine</span></div>
+                <div class="productleftsub"><span id="Price">£5.99</span></div>
+                <div class="productleftsub">
+                    <span style="width:100%"><h4>Colours Avaliable:</h4></span>
+                    
+                    {% for ser in colour %}
+                        <span style="margin:5px;background-color: black;clip-path: circle(50% at 50% 50%);"><a href="#"><div class="colourop" style="background-color:{{ser}}"></div></a></span>
+                    {%endfor%}
+                </div>
+                
+                <div class="productleftsub"><h5>{{desc}}</h5></div>
+                <div class="AddCart">
+                    <div class="Subheadding1">Coming Soon</div>
+                </div>
+                
+            </div>
+        
+        
+        </div>
+    </div>
+</body>
+
+{% endblock %}
