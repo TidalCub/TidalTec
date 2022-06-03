@@ -10,7 +10,34 @@
 
         <div class="productwrapper">
             <div class="productimgwrap">
-                <img src="/static/003nobackpreview.png" width="80%" height="auto">
+                <div id="demo" class="carousel slide" data-bs-interval="false"  style="width:100%;height:100%;">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                      
+                    </div>
+                    
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner" style="width:auto;height:100%;">
+                      <div class="carousel-item active">
+                        <img src="/static/003nobackpreview.png" alt="Image 1" class="d-block" style="width:80%;height:auto;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/static/003noback2.png" alt="Image 2" class="d-block" style="width:80%;height:auto;">
+                      </div>
+                      
+                    </div>
+                    
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" style="filter: invert(100%);"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" style="filter: invert(100%);"></span>
+                    </button>
+                  </div>
             </div>
             <div class="productleft">
                 <div class="productleftsub"><span class="producttitle">BB Funnel for MP5 High-Cap Magazine</span></div>
@@ -25,14 +52,38 @@
                 
                 <div class="productleftsub"><h5>{{desc}}</h5></div>
                 <div class="AddCart">
-                    Please vist <a href="https://www.etsy.com/uk/shop/TidalTech?ref=seller-platform-mcnav">Etsy</a> or <a href="https://www.ebay.co.uk/usr/tidal-tech?_trksid=p2047675.m3561.l2559">Ebay</a> to purches a funnel
+                    <div class="subhead">Please vist <a href="https://www.etsy.com/uk/shop/TidalTech?ref=seller-platform-mcnav">Etsy</a> or <a href="https://www.ebay.co.uk/usr/tidal-tech?_trksid=p2047675.m3561.l2559">Ebay</a> to purches a funnel</div>
                 </div>
                 
             </div>
         
         
         </div>
-    </div>
+        <div class="Spacer" style="height: 50px;"></div>
+        <div class="productwrapper">
+            <div class="productright">                <iframe width="99%" height="auto" src="https://www.youtube.com/embed/qE1uOEcNX6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+            <div class="productleft"><div class="subhead">Description</div>A Funnel for AUG Hi-cap magazines to easily and quickly fill your magazines and get you back in the action.
+
+                This is a continuation of the m4 Funnel, requested by a customer. This will work with most AUG hi-cap magazines.
+                <br><br>
+                With this design, there is no more wasting BBs trying to make a funnel with your hand, simply clip onto the mag meaning your hands are free to pour BBs and hold the mag in place, making it easier to fill.
+                
+                This is a great addition to any airsofter who runs an AUG. Available in a range of colours to suit any loadout. Don't have the colour you want? Get in touch and we will try to add a new colour!
+                
+                The BB funnel has been tried and tested. 
+                <br><br>
+                This product is made using eco-friendly PLA, which is 3D printed. Polylactide (PLA), is a renewable thermoplastic and a polymer. It is processed from the starch of plants such as corn, sugar cane and sugar beet, making it environmentally friendly and sustainable.
+                
+                As this is a 3D product, there may be slight imperfections, such as visible lines. We ensure you that this has no effect on the product's performance. All products are inspected.
+                <br><br>
+                Proud to support UK businesses!
+                Hand Made in the UK and all materials used have been made and sourced in the UK<br><br><br><br>
+                
+        </div>
+        
+        <div class="Spacer" style="height: 50px;"></div></div>
 </body>
 
 {% endblock %}
