@@ -12,7 +12,7 @@ def home():
 @app.route("/wholesale")
 def wholesale():
     data = session.query(Wholesale).all()
-    return render_template('wholesale.html',data = data)
+    return render_template('blockpage.html')
 
 @app.route("/wholesale/<catagory>")
 def catagory(catagory):
@@ -55,7 +55,7 @@ def AUGfunnel():
 def MOSfunnel():
     colours = ["black","grey","red","white","yellow","green"]
     return render_template('/producttemp/MOSFunnel.html', colour = colours)
-    
+
 @app.route("/accessories/AKFunnel")
 def AKfunnel():
     colours = ["black","grey","red","white","yellow","green"]
