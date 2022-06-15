@@ -18,4 +18,3 @@ def wholesale(jsonfilter,product):
 
 
 data = wholesale("M4 BB Funnel",True)
-print(data["colour"].split(","))

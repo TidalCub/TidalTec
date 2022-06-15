@@ -1,8 +1,18 @@
-from flask import Flask, request, render_template, redirect
+from flask import Flask, render_template_string, request, render_template, redirect,session
+
+
+
 from sqlalchemy import false
-from dbmodule import Wholesale, session 
+from dbmodule import Wholesale, sesh 
 import jsonhandelermodule as js
+from modules import formatedlist
 app = Flask(__name__)
+
+app.secret_key = "SECRENT KEY GOES HERE"
+
+@app.before_request
+def make_session_permanent():
+    session.permanent = True
 
 @app.route("/")
 @app.route("/home")
@@ -11,19 +21,19 @@ def home():
 
 @app.route("/wholesale")
 def wholesale():
-    data = session.query(Wholesale).all()
+    data = sesh.query(Wholesale).all()
     return render_template('blockpage.html')
 
 @app.route("/wholesale/<catagory>")
 def catagory(catagory):
-    data = session.query(Wholesale).filter_by(Cat = catagory).all()
+    data = sesh.query(Wholesale).filter_by(Cat = catagory).all()
     catinfo = js.wholesale(catagory,False)
-    print(catinfo)
+    
     return render_template('catogorypage.html',data = data, Cat=catinfo["title"],)
 
 @app.route("/wholesale/<catagory>/<product>")
 def wholeproduct(catagory,product):
-    print(product)
+    
     info = js.wholesale(product,True)
     
     colours = info["colour"].split(",")
@@ -34,9 +44,22 @@ def accessories():
    
    return render_template('accessories.html')
 
-@app.route("/accessories/M4BBFunnel")
+@app.route("/accessories/M4BBFunnel", methods=["GET","POST"])
 def M4BBfunnel():
-    colours = ["black","grey","red","white","yellow","green"]
+    colours = ["black","grey","red","white","yellow","green","blue"]
+    
+    if request.method == "POST":
+        item = ("img ","M4 BB Funnel" , request.form['colours'] , 1, "5.48")
+        if 'cart' in session:
+            
+            session['cart'] = session.get('cart') + item # reading and updating session data
+        else:
+            session['cart'] = item
+
+        
+    
+    
+    
     return render_template('/producttemp/m4Funnel.html', colour = colours)
 
 @app.route("/accessories/mp5Funnel")
@@ -60,6 +83,38 @@ def MOSfunnel():
 def AKfunnel():
     colours = ["black","grey","red","white","yellow","green"]
     return render_template('/producttemp/AKFunnel.html', colour = colours)
+
+
+@app.route("/basket")
+def basket():
+    
+    cart = session.get('cart')
+    
+    if cart != None:
+
+       formadlist = formatedlist(cart)
+        
+    else:
+        formadlist = None
+    
+    return render_template('basket.html',cart = formadlist)
+
+@app.route("/pop")
+def pop():
+    session.pop('cart')
+    return redirect ("/basket", code=302)
+
+@app.route("/basket/<id>/")
+def remove(id):
+    cart = session.get('cart')
+    cart = list(cart)
+    for i in range(0,5):
+        cart.pop(int(id)*5)
+    
+    cart = tuple(cart)
+    session['cart'] = cart
+    return redirect ("/basket", code=302)
+
 if __name__ == "__main__":
     app.run(debug=True)
 

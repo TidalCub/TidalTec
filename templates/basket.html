@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %} 
+
+{% block body %}
+<div class="basketwrapper">
+    <div class="PageHeader">Your Basket</div>
+    <div class="basketleft">
+        {% if cart%}
+            {% for item in cart %}
+            <div class="BaskedItem">
+                <div id="imgpreview"><img src="{{item[1]}}" height="100%" width="100%"></div>
+                <div id="RightItem">
+                   <div id="topline"><div id="Name">{{item[2]}}</div><div id="remove"><a href="/basket/{{item[0]}}">x</a></div></div>
+                   <div id="bottomline"><div id="colorpre" style="background-color:{{item[3]}} ;"></div><div style="padding-left:5px ;">{{item[3]}}</div><div id="qty">Qtuantity: {{item[4]}}</div><div id="price">£{{item[5]}}</div></div>
+                    
+                </div>
+                
+            </div>
+                
+            {%endfor%}
+        {% else %}
+           Your Basket is empty
+        {%endif%}
+    </div>
+    <div class="basketright"><a href="/pop">Pop</a></div>
+</div>
+{% endblock %}

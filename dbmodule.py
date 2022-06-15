@@ -8,7 +8,7 @@ engine = db.create_engine('sqlite:///SiteDB.db',connect_args={'check_same_thread
 meta = MetaData()
 conn = engine.connect()
 Session = sessionmaker(bind = engine)
-session = Session()
+sesh = Session()
 
 Wholesale = Table(
     'Wholesale', meta,
@@ -19,4 +19,3 @@ Wholesale = Table(
         Column('Cat', String),
 )
 meta.create_all(engine)
-print(session.query(Wholesale).all())

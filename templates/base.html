@@ -19,6 +19,19 @@
         </div>
         <div id="Heading">Tidal Tech Airsoft</div>
         <div id="HeadRight">
+          
+          <div class="RightCont">
+            <a href="/basket">
+              <img src="/static/bag.png" width="auto" height="100%">
+              
+            </a>
+          </div>
+         <!-- <div class="RightCont">
+            <a href="#">
+              <img src="/static/account.png" width="auto" height="100%">
+            </a>
+          </div>-->
+          <!--<a href="/basket"><img src="/static/account.png" width="auto" height="50%"></a>-->
           </div>
     </div>
     <div id="Nav">
@@ -72,5 +85,8 @@
         }
       }
     }
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+  }
     </script>
 </html>
