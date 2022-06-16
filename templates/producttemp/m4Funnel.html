@@ -51,7 +51,7 @@
                     <span style="width:100%;"><h4>Colours Avaliable:</h4></span>
                     <form method="POST" style="width:98%;">
                     {% for ser in colour %}
-                        <div class="input-radio" ><input type="radio" name="colours" id="{{ser}}"  value="{{ser}}"> <label for="{{ser}}" style="background-color:{{ser}} ; border-radius: 40px; color:{{ser}}"></label></div>
+                        <div class="input-radio" ><input type="radio" name="colours" id="{{ser}}"  value="{{ser}}" required> <label for="{{ser}}" style="background-color:{{ser}} ; border-radius: 40px; color:{{ser}}"></label></div>
                     {%endfor%}
                     
                     <br><input type="submit" value="Add to basket" class="AddCart">
