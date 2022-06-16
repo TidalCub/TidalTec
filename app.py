@@ -6,7 +6,10 @@ from modules import formatedlist
 import json
 app = Flask(__name__)
 
-app.secret_key = ""
+with open('./jsonfiles/config.json') as config_file:
+    config = json.load(config_file)
+
+app.secret_key = config.get("Secret_Key")
 
 @app.before_request
 def make_session_permanent():
